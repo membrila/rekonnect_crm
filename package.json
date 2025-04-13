@@ -1,28 +1,24 @@
 {
   "name": "rekonnect-crm",
   "version": "1.0.0",
-  "description": "A CRM application for managing customer relationships.",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "build": "prisma generate && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prisma": "prisma"
   },
-  "keywords": [
-    "CRM",
-    "customer",
-    "management"
-  ],
-  "author": "Your Name",
-  "license": "MIT",
   "dependencies": {
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest"
+    "@prisma/client": "^5.10.2",
+    "next": "13.4.12",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "typescript": "latest",
-    "@types/react": "latest",
-    "@types/node": "latest"
+    "prisma": "^5.10.2",
+    "typescript": "^5.2.2",
+    "@types/react": "^18.2.0",
+    "@types/node": "^20.0.0"
   }
 }
